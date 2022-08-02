@@ -1,13 +1,19 @@
-let counter = 0;
+// let counter = 0;
 class Book {
     constructor(title, description, author){
         this.title = title;
         this.description = description;
         this.author = author;
-        this.id = counter++;
+        // this.id = counter++;
+        this.id = this.id = () => {
+            return Date.now().toString(36) + Math.random().toString(36).substr(2);
+          };
     }
-
 }
+
+
+
+
 
 class Library {
     constructor(){
